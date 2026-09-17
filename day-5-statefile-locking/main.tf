@@ -15,7 +15,7 @@ resource "aws_subnet" "name" {
 
 resource "aws_instance" "name" {
     ami = var.ami_id
-    instance_type = "t3.small"
+    instance_type = "t3.micro"
     subnet_id = aws_subnet.name.id
     tags = {
         Name = "custom-instance"
